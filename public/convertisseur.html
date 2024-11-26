@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="assets/bootstrap.min.css" rel="stylesheet">
+    <title>Convertisseur</title>
+</head>
+<body>
+
+<main class="container py-4 px-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 d-flex align-items-center mb-5">
+
+            <img src="https://cdn-icons-png.flaticon.com/128/4425/4425651.png" alt="convertir" width="50" height="50" >
+            <h1 class="align-self-center ms-3 fs-1 fw-semibold">Convertisseur d'Unités</h1>
+        </div>
+
+        <div class="card shadow-sm">
+
+            <div class="card-body">
+
+                <form id="formulaire">
+
+                    <div class="mb-3">
+                        <div class="align-items-center d-flex">
+                            <img src="https://cdn-icons-png.flaticon.com/128/14959/14959596.png" alt="convertir" width="40" height="40">
+                            <label for="valeur" class="form-label fs-3 ms-1">Valeur à convertir</label>
+                        </div>
+                        <input type="number"
+                               class="form-control"
+                               id="valeur"
+                               placeholder="Entrez une valeur"
+                               required>
+                    </div>
+                    
+                    <div class="d-flex align-items-center justify-content-evenly my-5">
+
+                        
+                        
+                        <div class="mb-3 flex-column">
+                            <div>
+                                <img src="https://cdn-icons-png.flaticon.com/128/10024/10024577.png" alt="unité de départ" width="50" height="50">
+                                <label for="uniteDepart" class="form-label fs-4">Unité de départ</label></div>
+                            <select id="uniteDepart" name="uniteDepart" class="form-select" aria-label="Mètre (m)" style="min-width: 450px">
+                                <option value="m" selected>Mètre (m)</option>
+                                <option value="km">Kilomètre (km)</option>
+                                <option value="g">Gramme (g)</option>
+                                <option value="kg">Kilogramme (kg)</option>
+                                <option value="c">Celsius (°C)</option>
+                                <option value="f">Fahrenheit (°F)</option>
+                            </select>
+
+                        </div>
+                        
+                        
+                        <img src="https://cdn-icons-png.flaticon.com/128/17711/17711855.png" alt="convertion" width="80" height="80">
+
+                        <div class="mb-3 flex-column">
+                            <div>
+                                <img src="https://cdn-icons-png.flaticon.com/128/16799/16799937.png" alt="unité d'arriver" width="40" height="40">
+                                <label for="uniteArriver" class="form-label fs-4 ms-1">Unité de d'arriver</label></div>
+                            <select id="uniteArriver" name="uniteArriver"  class="form-select" aria-label="Mètre (m)" style="min-width: 450px">
+                                <option value="m" selected>Mètre (m)</option>
+                                <option value="km">Kilomètre (km)</option>
+                                <option value="g">Gramme (g)</option>
+                                <option value="kg">Kilogramme (kg)</option>
+                                <option value="c">Celsius (°C)</option>
+                                <option value="f">Fahrenheit (°F)</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="text-center">
+                    <button type="button" class="btn btn-info fw-bold w-100" id="convertir-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                            <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41m-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9"/>
+                            <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5 5 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z"/>
+                        </svg>
+                        Convertir</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="card shadow-sm mt-5">
+
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <img src="https://cdn-icons-png.flaticon.com/128/11607/11607069.png" alt="Résultat" width="40" height="40">
+                <h3 class="fs-3">Résultat</h3>
+                </div>
+                <span class="align-middle"><p class="bg-light text-center fs-3" id="resultat" style="min-height: 70px"> Aucun résultat pour l'instant.</p> </span>
+            </div>
+
+        </div>
+
+
+</main>
+
+
+<script src="assets/convertisseur.js"></script>
+</body>
+</html>
